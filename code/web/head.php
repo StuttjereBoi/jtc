@@ -1,25 +1,26 @@
+<?php
+
+if(!isset($_SESSION)){session_start();}
+require_once "../code/php/loader.php";
+
+$pageName = str_replace(".php", "",  basename($_SERVER["PHP_SELF"]));
+
+function getName($page){
+  switch($page){
+    case "login":
+      return "JTC | Login";
+  }
+}
+
+?>
 <head>
-  <!-- metakeys -->
-  <meta charset="utf8mb4">
-  <meta name="description" content="Free Japanese learning website">
-  <meta name="keywords" content="Japanese, Exercises, Learning, JFZ">
-  <meta name="author" content="Jacob Ligthart">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- default style sheets -->
-  <link rel="stylesheet" alt="default style" href="../assets/css/style.css">
-  <link rel="icon" alt="website icon" href="../assets/images/.png">
-  <!-- page specifics -->
-  <?php
-    // Get pagename
-    $pageName = str_replace('.php', '', basename($_SERVER['PHP_SELF']));
-    // Link stylesheet
-    echo "<link rel='stylesheet' href='../assets/css/{$pageName}.css'>";
-    // Switch for pages
-    switch($pageName){
-      case 'index':
-        break;
-      default:
-        break;
-    }
-  ?>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script src="../code/js/login.code.js"></script>
+  <script src="../code/js/functions.code.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.min.css">
+  <title><?php echo getName($pageName); ?></title>
 </head>

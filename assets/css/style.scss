@@ -1,0 +1,94 @@
+@import 'fonts';
+@import 'var';
+@import 'mixin';
+@import 'resets';
+
+header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: calc(100vw - 2%);
+  padding: 0 1%;
+  background-color: white;
+  box-shadow: 0 0 1rem #00000050;
+  nav{
+    float: right;
+    ul{
+      overflow: hidden;
+      list-style-type: none;
+      padding: unset;
+      margin: unset;
+      li{
+        float: left;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.5rem;
+        a{
+          padding: 1.5rem 2rem;
+          display: block;
+          height: 100%;
+          text-decoration: none;
+          color: black;
+          font-family: $jap;
+        }
+      }
+      li:hover{
+        a{
+          color: #909090;
+        }
+      }
+    }
+  }
+}
+
+.banner{
+  font-family: "Didact Gothic";
+  margin: 4.5rem 0 0 0;
+  width: 100vw;
+  background-color: rgba(144,144,144,.5);
+  background-blend-mode: saturation;
+  background-image: url("../images/tokyo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  display: block;
+  main{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+    height: 50vh;
+    ul{
+      text-align: center;
+      padding: unset;
+      list-style-type: none;
+      margin: 0 auto 0 auto;
+      overflow: visible;
+      align-items: stretch;
+      li{
+        display: inline-block;
+        padding: 0 .5rem;
+        font-size: 1.5rem;
+        color: white;
+        a{
+          color: white;
+          text-decoration: none;
+        }
+        a:hover{
+          font-weight: bold;
+        }
+      }
+      li:nth-child(2n+2)::before{
+        content: "―";
+      }
+    }
+    h1{
+      line-height: 6rem;
+      margin: unset;
+      color: white;
+      font-size: 5rem;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+}
